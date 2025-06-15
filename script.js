@@ -130,17 +130,17 @@ function cleanSongUrl(info) {
     return results;
 }
 
-async function getData(songFolder) {
-    let getData = await fetch(`http://192.168.0.102:3000/playlists/${songFolder}`)
-    let data = await (getData.text())
+function getData(folderName) {
+    const songNames = {
+        'Beats': ['JAIZ (1).mp3', 'DENYm.mp3'],
+        'playlist1': ['Don Toliver - No Pole [Official Music Video].mp3', 'Metro Boomin, Don Toliver, Future - Too Many Nights (Official Video).mp3'],
+        'playlist2': ['relax1.mp3', 'relax2.mp3']
+    };
 
-    let div = document.createElement('div')
-    div.innerHTML = data
-
-    let aList = div.getElementsByTagName(`a`)
-
-    return generateSongList(aList)
+    const basePath = `playlists/${folderName}/`;
+    return songNames[folderName].map(name => basePath + name);
 }
+main('Beats')
 
 let currentTrack = new Audio();
 
