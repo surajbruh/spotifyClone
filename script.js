@@ -140,7 +140,7 @@ function getData(folderName) {
     const basePath = `playlists/${folderName}/`;
     return songNames[folderName].map(name => basePath + name);
 }
-main('Beats')
+main('Beats');
 
 let currentTrack = new Audio();
 
