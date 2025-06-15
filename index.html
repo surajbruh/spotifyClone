@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuries.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <i id="spotifyLogo" class="fa-brands fa-spotify"></i>
+            <span id="home" class="material-symbols-rounded">
+                home
+            </span>
+            <div class="nav-searchbar">
+                <span id="searchIcon" class="material-symbols-rounded">
+                    search
+                </span>
+                <input id="searchInput" type="text" placeholder="What do you want to play?">
+                <span id="close" class="material-symbols-rounded">
+                    close
+                </span>
+                <span id="browse" class="material-symbols-rounded">
+                    home_storage
+                </span>
+            </div>
+            <div class="nav-profile">
+                <h3>Explore Premium</h3>
+                <span class="material-symbols-rounded">
+                    notifications
+                </span>
+                <span class="material-symbols-rounded">
+                    groups
+                </span>
+                <div class="profile">
+                    <img id="profileImg" src="" alt="">
+                </div>
+            </div>
+            <span id="menu" class="material-symbols-rounded">
+                menu
+            </span>
+        </div>
+        <div class="main">
+            <div class="main-left">
+                <div class="left-topbar">
+                    <div class="topbar-library">
+                        <span #id="libraryIcon" class="material-symbols-outlined">
+                            newsstand
+                        </span>
+                        <h3 id="yourLibrary">Your Library</h3>
+                        <div class="create-div">
+                            <span class="material-symbols-rounded icons">
+                                add
+                            </span>
+                            <h3>create</h3>
+                        </div>
+                        <span id="expand" class="material-symbols-rounded icons">
+                            expand_content
+                        </span>
+                    </div>
+                    <div class="left-topbar-category">
+                        <h3>Playlist</h3>
+                        <h3>Artist</h3>
+                        <h3>Album</h3>
+                    </div>
+                </div>
+                <div class="library-container">
+                    <div class="library">
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="trackCover.svg" alt="">
+                            </div>
+                            <div class="trackInfo test" data-songURL="">
+                                <h3>Song name</h3>
+                                <h3>Artist name</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/ef/ab/63/efab636ba479828b69690467e5de0e02.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Steve Lacy</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/f8/10/ed/f810ed35fcc29847bfd7e164e807692a.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Don Toliver</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/09/45/c3/0945c3a381ab5f624544780db479c33f.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Playboi Carti</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/71/3c/a0/713ca0b6be6094e05ff3712725f72b96.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Flower Boy</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/55/22/da/5522dac5f95f9b9b34cc9652a130560a.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Sabrina Carpenter</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/ef/ab/63/efab636ba479828b69690467e5de0e02.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Steve Lacy</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/f8/10/ed/f810ed35fcc29847bfd7e164e807692a.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Don Toliver</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/09/45/c3/0945c3a381ab5f624544780db479c33f.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Playboi Carti</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/71/3c/a0/713ca0b6be6094e05ff3712725f72b96.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Flower Boy</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/55/22/da/5522dac5f95f9b9b34cc9652a130560a.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Sabrina Carpenter</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/ef/ab/63/efab636ba479828b69690467e5de0e02.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Steve Lacy</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/f8/10/ed/f810ed35fcc29847bfd7e164e807692a.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Don Toliver</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/09/45/c3/0945c3a381ab5f624544780db479c33f.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Playboi Carti</h3>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="trackCover">
+                                <img src="https://i.pinimg.com/736x/71/3c/a0/713ca0b6be6094e05ff3712725f72b96.jpg"
+                                    alt="">
+                            </div>
+                            <div class="trackInfo">
+                                <h3>Flower Boy</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="category">
+                    <h3>All</h3>
+                    <h3>Music</h3>
+                    <h3>Podcasts</h3>
+                </div>
+                <div class="recently-played">
+                    <div class="box">
+                        <div class="cover">
+                            <img src="https://i.pinimg.com/736x/f8/10/ed/f810ed35fcc29847bfd7e164e807692a.jpg" alt="">
+                        </div>
+                        <h3>Don Toliver</h3>
+                    </div>
+                    <div class="box">
+                        <div class="cover">
+                            <img src="https://i.pinimg.com/736x/99/a2/c7/99a2c74a6f005d16475ec26161ac7f77.jpg" alt="">
+                        </div>
+                        <h3>PLAN A</h3>
+                    </div>
+                    <div class="box">
+                        <div class="cover">
+                            <img src="https://i.pinimg.com/736x/70/6c/cb/706ccbe1d186e29c591f75bf9b661934.jpg" alt="">
+                        </div>
+                        <h3>DIE LIT</h3>
+                    </div>
+                    <div class="box">
+                        <div class="cover">
+                            <img src="https://i.pinimg.com/736x/f8/10/ed/f810ed35fcc29847bfd7e164e807692a.jpg" alt="">
+                        </div>
+                        <h3>HARDSTONE PSYCHO</h3>
+                    </div>
+                    <div class="box">
+                        <div class="cover">
+                            <img src="https://i.pinimg.com/736x/f8/10/ed/f810ed35fcc29847bfd7e164e807692a.jpg" alt="">
+                        </div>
+                        <h3>HARDSTONE PSYCHO</h3>
+                    </div>
+                    <div class="box">
+                        <div class="cover">
+                            <img src="https://i.pinimg.com/736x/f8/10/ed/f810ed35fcc29847bfd7e164e807692a.jpg" alt="">
+                        </div>
+                        <h3>HARDSTONE PSYCHO</h3>
+                    </div>
+                    <div class="box">
+                        <div class="cover">
+                            <img src="https://i.pinimg.com/736x/f8/10/ed/f810ed35fcc29847bfd7e164e807692a.jpg" alt="">
+                        </div>
+                        <h3>HARDSTONE PSYCHO</h3>
+                    </div>
+                    <div class="box">
+                        <div class="cover">
+                            <img src="https://i.pinimg.com/736x/f8/10/ed/f810ed35fcc29847bfd7e164e807692a.jpg" alt="">
+                        </div>
+                        <h3>HARDSTONE PSYCHO</h3>
+                    </div>
+                </div>
+                <div class="slide1-container">
+                    <p>Made for you</p>
+                    <h1>Krishna</h1>
+                    <div #swiperRef="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slides" data-playlistInfo="'http://192.168.0.102:3000/playlists/playlist1/'">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/5d/8f/ea/5d8fea3ca7a1350bbad9c846173b1519.jpg"
+                                        alt="">
+                                </div>
+                                <div class="slideInfo">
+                                    <h3 class="title">Titles</h3>
+                                    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/ab/1b/4e/ab1b4e606e11099a00172cf8e233fa91.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/1a/dd/08/1add086bd92cd3e70099a1a56be8256f.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/5a/88/0a/5a880ae7e8cdb619baea933002003801.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/7f/77/7b/7f777b107d9634495724272e5f99ba97.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/b0/77/f2/b077f2231802efbb1bd958aba96145c8.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/06/52/95/0652954d805166bba05527c33f9ff230.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/8f/97/00/8f97007e1d4de05bcff5448c7e3df9aa.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/c6/54/fc/c654fc60852e2647f639609a918dfa24.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-next swiper-btn"></div>
+                        <div class="swiper-button-prev swiper-btn"></div>
+                    </div>
+                </div>
+                <div class="slide1-container">
+                    <p>Made for you</p>
+                    <h1>Krishna</h1>
+                    <div #swiperRef="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/5d/8f/ea/5d8fea3ca7a1350bbad9c846173b1519.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/ab/1b/4e/ab1b4e606e11099a00172cf8e233fa91.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/1a/dd/08/1add086bd92cd3e70099a1a56be8256f.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/5a/88/0a/5a880ae7e8cdb619baea933002003801.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/7f/77/7b/7f777b107d9634495724272e5f99ba97.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/b0/77/f2/b077f2231802efbb1bd958aba96145c8.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/06/52/95/0652954d805166bba05527c33f9ff230.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/8f/97/00/8f97007e1d4de05bcff5448c7e3df9aa.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+                            <div class="swiper-slide slides">
+                                <div class="slide-cover">
+                                    <img src="https://i.pinimg.com/736x/c6/54/fc/c654fc60852e2647f639609a918dfa24.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, vel.</p>
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-next swiper-btn"></div>
+                        <div class="swiper-button-prev swiper-btn"></div>
+                    </div>
+                </div>
+                <div class="slide1-container favorite">
+                    <h1>Your Favorite Artists</h1>
+                    <div #swiperRef="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slides artCon">
+                                <div class="slide-cover artists">
+                                    <img src="https://c.saavncdn.com/303/DEPRESSED-BUT-MAKE-IT-COOL-English-2022-20220803132154-500x500.jpg"
+                                        alt="">
+                                </div>
+                                <p>rahul</p>
+                            </div>
+                            <div class="swiper-slide slides artCon">
+                                <div class="slide-cover artists">
+                                    <img src="https://i.pinimg.com/736x/10/12/66/1012665a812686d32e28193fda4bd436.jpg"
+                                        alt="">
+                                </div>
+                                <p>tyler, the creator</p>
+                            </div>
+                            <div class="swiper-slide slides artCon">
+                                <div class="slide-cover artists">
+                                    <img src="https://i.pinimg.com/736x/d4/de/89/d4de89eaa17f424be617bf472e486fc5.jpg"
+                                        alt="">
+                                </div>
+                                <p>Brent Faiyaz</p>
+                            </div>
+                            <div class="swiper-slide slides artCon">
+                                <div class="slide-cover artists">
+                                    <img src="https://i.pinimg.com/736x/02/da/dd/02dadd133337dd6f63398a4bda667e9c.jpg"
+                                        alt="">
+                                </div>
+                                <p>playboi carti</p>
+                            </div>
+                            <div class="swiper-slide slides artCon">
+                                <div class="slide-cover artists">
+                                    <img src="https://i.pinimg.com/736x/f8/10/ed/f810ed35fcc29847bfd7e164e807692a.jpg"
+                                        alt="">
+                                </div>
+                                <p>don toliver</p>
+                            </div>
+                            <div class="swiper-slide slides artCon">
+                                <div class="slide-cover artists">
+                                    <img src="https://i.pinimg.com/736x/b1/c8/45/b1c845c3fa81085374470d3af7026498.jpg"
+                                        alt="">
+                                </div>
+                                <p>2holis</p>
+                            </div>
+                            <div class="swiper-slide slides artCon">
+                                <div class="slide-cover artists">
+                                    <img src="https://i.pinimg.com/736x/51/62/1e/51621e437a6c6e89052d751b44e05a6a.jpg"
+                                        alt="">
+                                </div>
+                                <p>Talwinder</p>
+                            </div>
+                            <div class="swiper-slide slides artCon">
+                                <div class="slide-cover artists">
+                                    <img src="https://i.pinimg.com/736x/c9/9e/59/c99e595bcee5bb44bac116d149b41562.jpg"
+                                        alt="">
+                                </div>
+                                <p>Lil tecca</p>
+                            </div>
+                            <div class="swiper-slide slides artCon">
+                                <div class="slide-cover artists">
+                                    <img src="https://www.shazam.com/mkimage/image/thumb/Music126/v4/f4/99/45/f4994567-b5b8-f58c-258c-0d31306796d0/197189255885.jpg/800x800bb.webp"
+                                        alt="">
+                                </div>
+                                <p>Hardbone</p>
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-next swiper-btn"></div>
+                        <div class="swiper-button-prev swiper-btn"></div>
+                    </div>
+                </div>
+                <div class="lastBar">
+
+                </div>
+            </div>
+        </div>
+        <div class="playBar">
+            <div class="currentTrack">
+                <div class="currentTrackCover">
+                    <img src="https://i.pinimg.com/736x/cf/1e/db/cf1edb3a99788739857b3ec3d624cca6.jpg" alt="">
+                </div>
+                <div class="currentTrackInfo">
+                    <h3 id="trackName">Track name</h3>
+                    <h3 id="trackArtist">Artist name</h3>
+                </div>
+                <div class="addToPlaylist">
+                    <span id="add_circle" class="material-symbols-outlined extra">
+                        add_circle
+                    </span>
+                    <span id="check_small" class="material-symbols-outlined extra">
+                        check_small
+                    </span>
+                </div>
+            </div>
+            <div class="playBarButton-container">
+                <div class="playBarButtons">
+                    <span id="shuffleButton" class="material-symbols-outlined extra">
+                        shuffle
+                    </span>
+                    <span id="skipPreviousButton" class="material-symbols-outlined extra">
+                        skip_previous
+                    </span>
+                    <div class="playPause">
+                        <span id="playButton" class="material-symbols-outlined">
+                            play_arrow
+                        </span>
+                        <span id="pauseButton" class="material-symbols-outlined">
+                            pause
+                        </span>
+                    </div>
+                    <span id="skipNextButton" class="material-symbols-outlined extra">
+                        skip_next
+                    </span>
+                    <span id="repeatButton" class="material-symbols-outlined extra">
+                        repeat
+                    </span>
+                </div>
+                <div class="durationContainer">
+                    <h3 id="currentTime">00:00</h3>
+                    <input id="durationBar" type="range" value="0" max="100">
+                    <h3 id="totalDuration">00:00</h3>
+                </div>
+            </div>
+            <div class="playBarExtra">
+                <span id="notes" class="material-symbols-outlined extra">
+                    notes
+                </span>
+                <span id="queue_music" class="material-symbols-outlined extra">
+                    queue_music
+                </span>
+                <span id="devices" class="material-symbols-outlined extra">
+                    devices
+                </span>
+                <div class="volume-container">
+                    <div class="volume-label">
+                        <span id="volume_up" class="material-symbols-outlined extra">
+                            volume_up
+                        </span>
+                    </div>
+                    <input id="volumeBar" type="range" min="0" max="100" value="100" />
+                </div>
+                <span id="pip" class="material-symbols-outlined extra">
+                    pip
+                </span>
+                <span id="fullscreen" class="material-symbols-outlined extra">
+                    fullscreen
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/e73d5ae716.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="/playlist.js"></script>
+</body>
+
+</html>

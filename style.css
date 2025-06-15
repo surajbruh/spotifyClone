@@ -1,0 +1,924 @@
+@font-face {
+    font-family: 'SpotifyRegular';
+    src: url(assets/spotifyFont/SpotifyMix-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'SpotifyUI';
+    src: url(assets/spotifyFont/SpotifyMix-Ultra.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'SpotifyRegular';
+    font-size: 62.5%;
+    font-weight: 400;
+
+    box-sizing: border-box;
+}
+
+.material-symbols-rounded {
+    color: #b3b3b3;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+:root {
+    --minPadding: 0.5rem;
+    --minGap: 0.5rem;
+    --maxPadding: 1rem;
+    --maxGap: 1rem;
+
+
+    --iconSize: 3rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+}
+
+#home {
+    background-color: #b3b3b346;
+    border-radius: 5rem;
+    margin-left: auto;
+    padding: var(--maxPadding);
+    font-size: var(--iconSize);
+}
+
+.navbar {
+    background-color: black;
+    box-sizing: border-box;
+
+    height: max-content;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.5rem 0;
+
+    gap: 1rem;
+}
+
+.nav-searchbar {
+    background-color: rgba(44, 44, 44, 0.869);
+    border-radius: 5rem;
+
+    width: minmax(450px, 20%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: var(--maxPadding);
+    margin-right: auto;
+}
+
+#searchInput {
+    background-color: transparent;
+    color: white;
+
+
+    border: none;
+    outline: none;
+
+    width: 100%;
+
+    font-size: 1.6rem;
+}
+
+.nav-searchbar>span {
+    font-size: var(--iconSize);
+}
+
+#browse {
+    border-left: 1px solid white;
+
+    padding-left: 1rem;
+}
+
+.nav-profile>span,
+#menu {
+    border-radius: 5rem;
+    font-size: var(--iconSize);
+
+    padding: var(--maxPadding);
+}
+
+.nav-profile>span:hover,
+#menu:hover {
+    background-color: #b3b3b346;
+}
+
+#spotifyLogo {
+    font-size: 4.2rem;
+    color: white;
+
+    margin: 0 2rem;
+}
+
+.profile {
+    border: 5px solid #b3b3b346;
+    border-radius: 5rem;
+
+    width: 4.2rem;
+    height: 4.2rem;
+}
+
+.nav-profile {
+    margin: 0 1rem;
+    display: flex;
+
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.nav-profile>h3 {
+
+    background-color: white;
+    border-radius: 5rem;
+
+    margin: 0 0.5rem;
+    font-size: 1.6rem;
+
+    padding: var(--maxPadding);
+}
+
+#close {
+    opacity: 0;
+
+}
+
+#close:hover,
+#home:hover {
+    color: white;
+    transform: scale(105%);
+}
+
+#browse:hover,
+.nav-profile>span:hover {
+    color: white;
+}
+
+.nav-profile>h3:hover {
+    transform: scale(105%);
+}
+
+.nav-searchbar:focus-within {
+    border: 1px solid white;
+}
+
+#menu {
+    color: white;
+    font-size: var(--iconSize);
+
+    margin: 0 1rem;
+    display: none;
+}
+
+.main {
+    background-color: black;
+    width: 100%;
+    height: calc(100% - 60px);
+
+    padding: 0.5rem;
+    gap: 0.5rem;
+
+    display: flex;
+}
+
+.main-left {
+    background-color: #121212;
+    border-radius: 1rem;
+
+    width: 20%;
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    /* overflow: hidden; */
+}
+
+.main-right {
+    background-color: #121212;
+    border-radius: 1rem;
+
+    width: 80%;
+
+    overflow-y: scroll;
+
+}
+
+/* Smooth scroll behavior */
+.main-right {
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar styles for WebKit browsers */
+.main-right::-webkit-scrollbar {
+    width: 12px;
+}
+
+.main-right::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    /* Dark background */
+}
+
+.main-right::-webkit-scrollbar-thumb {
+    background-color: #555;
+    /* Darker thumb */
+    border-radius: 10px;
+    border: 3px solid #1e1e1e;
+    /* Matches track for inset look */
+}
+
+.main-right::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+}
+
+/* Firefox scrollbar support */
+* {
+    scrollbar-width: thin;
+    /* "auto" or "thin" */
+    scrollbar-color: #555 #1e1e1e;
+    /* thumb color, track color */
+}
+
+.category {
+    width: 100%;
+
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.category>h3:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.category h3 {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+
+    border-radius: 2.5rem;
+
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+}
+
+.recently-played {
+    padding: 0 2rem;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, minmax(80px, 1fr));
+    gap: 0.5rem;
+
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-height: max-content;
+}
+
+.cover {
+    flex-shrink: 0;
+    width: 75px;
+    height: 100%;
+
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.cover>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.box>h3 {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+
+.left-topbar {
+    padding: 1rem 0;
+    width: 100%;
+
+    box-shadow: 0px 15px 29px -15px rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 0px 15px 29px -15px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 0px 15px 29px -15px rgba(255, 255, 255, 0.2);
+}
+
+.topbar-library {
+    width: 100%;
+    /* min-height: 20%; */
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: var(--maxGap);
+    padding: var(--maxPadding) 2rem;
+
+    position: relative;
+    z-index: 100;
+}
+
+.topbar-library h3 {
+    color: white;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+
+}
+
+.create-div {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5rem;
+
+    padding: var(--maxPadding) 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: var(--minGap);
+
+    margin-left: auto;
+}
+
+.create-div>h3 {
+    font-weight: 400;
+}
+
+.main-left span {
+    font-size: 2.1rem;
+}
+
+#expand {
+    border-radius: 50px;
+
+    padding: 0.5rem;
+}
+
+#expand:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.left-topbar-category {
+    height: max-content;
+    padding: 0.5rem 2rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    overflow: hidden;
+}
+
+.left-topbar-category>h3 {
+    color: white;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2.5rem;
+
+    padding: 0.5rem 1.5rem;
+
+}
+
+.left-topbar-category>h3:hover,
+.create-div:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+.track {
+    width: 100%;
+    /* height: 10vmin; */
+    height: 75px;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5rem 2rem;
+    
+
+    gap: 0.5rem;
+
+}
+
+#artistName {
+    height: 25px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+.track:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.library-container {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    z-index: 99;
+    /* overflow-y: hidden; */
+}
+
+.library {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+    transition: all 0.5s linear;
+}
+
+.trackCover {
+    border: 1px solid #dadada;
+    width: 62px;
+    max-height: 62px;
+
+    overflow: hidden;
+}
+
+.trackCover>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.trackInfo {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.trackInfo>h3 {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.trackInfo>h3:nth-child(2) {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+.slide1-container {
+    min-height: 25%;
+    width: 100%;
+
+    margin: 3rem 0;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slide1-container>h1 {
+    color: white;
+
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+.slide1-container>h1:hover {
+    text-decoration: underline;
+}
+
+.slide1-container>p {
+    color: rgb(179, 179, 179);
+
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    border-radius: 1rem;
+
+    /* max-width: 20rem;
+    max-height: 25rem; */
+    max-width: 23rem;
+    max-height: 30rem;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+
+    flex-direction: column;
+
+    text-overflow: ellipsis;
+}
+
+.swiper-slide:hover {
+    background: rgba(255, 255, 255, 0.1);
+
+}
+
+.slide-cover {
+    width: 100%;
+    height: 80%;
+}
+
+.slide-cover>img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+    object-position: center center;
+}
+
+.swiper-slide>p {
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    font-weight: 100;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+
+.slideInfo>p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.6rem;
+    font-weight: 100;
+    display: inline-block;
+    line-height: 1.4rem;
+
+    text-overflow: ellipsis;
+}
+
+
+.artists>img {
+    width: 100%;
+    border-radius: 50rem;
+}
+
+.playBar {
+    width: 100%;
+    height: 8rem;
+
+    background-color: black;
+
+    position: absolute;
+    top: 100;
+    bottom: 0;
+    z-index: 99;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+.lastBar {
+    width: 100%;
+    height: 10vh;
+}
+
+.artCon>p {
+    text-transform: capitalize;
+}
+
+
+.playBarButtons,
+.playBarExtra {
+    color: white;
+
+    height: 100%;
+    width: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    gap: 0.5rem;
+}
+
+.playBarButton-container {
+    height: 100%;
+    width: 60%;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+.playBarButtons {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0.5rem;
+}
+
+.playBarExtra {
+    min-width: 550px;
+    padding: 0 1rem;
+    margin-left: auto;
+}
+
+.playBarButtons>span,
+.playPause>span,
+.playBarExtra>span,
+.volume-label>span,
+.addToPlaylist>span {
+    border-radius: 5rem;
+    font-size: 3.2rem;
+
+    padding: 1rem;
+    color: white;
+}
+
+#playButton {
+    background-color: transparent;
+    color: black;
+
+    display: block;
+}
+
+#pauseButton {
+    background-color: transparent;
+    color: black;
+
+    display: none;
+}
+
+.playPause {
+    background-color: white;
+    border-radius: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.extra:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.volume-container {
+    text-align: center;
+
+    height: 100%;
+    width: minmax(100%, 250px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+
+}
+
+.volume-label {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+input[type="range"] {
+    width: minmax(100%, 150px);
+    height: 6px;
+    background: #333;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    accent-color: #ffffff;
+    /* Modern replacement */
+}
+
+input[type="range"]:hover {
+    accent-color: green;
+    background: #333;
+
+}
+
+.durationContainer {
+    width: 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+    position: absolute;
+
+    bottom: 0.5rem;
+}
+
+.durationContainer>h3 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+#durationBar {
+    width: 100%;
+    height: 0.5rem;
+
+    background-color: white;
+}
+
+
+#durationBar[type="range"]:hover {
+    accent-color: rgb(255, 255, 255);
+    background: #333;
+
+}
+
+/* For WebKit browsers */
+input[type="range"]::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px #00ffe7;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: #1affff;
+    box-shadow: 0 0 15px #1affff;
+}
+
+/* For Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffe7;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background-color: #333;
+    box-shadow: 0 0 15px #1affff;
+}
+
+.currentTrack {
+    color: white;
+
+    height: 8rem;
+    width: max(300px, 20vw);
+
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+.currentTrackCover {
+    border: 1px solid white;
+    max-height: 62px;
+    max-width: 62px;
+    overflow: hidden;
+}
+
+.currentTrackInfo {
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.currentTrackInfo>h3 {
+    font-size: 1.2rem;
+}
+
+#trackName {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+ #trackArtist{
+        width: 100%;
+    }
+
+.addToPlaylist {
+    border-radius: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addToPlaylist>span {
+    padding: 0.5rem;
+}
+
+#add_circle {
+    display: block;
+}
+
+#check_small {
+    display: none;
+}
+
+.currentTrackCover>img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.topbar-library:hover {
+    cursor: default;
+}
+
+.topbar-library>span {
+    border-radius: 5rem;
+    font-size: 3.2rem;
+
+    padding: 2rem;
+    color: white;
+
+    display: none;
+}
+
+#yourLibrary {
+    margin-right: auto;
+}
+
+.title {
+    color: white;
+    font-size: 2.1rem;
+    width: 100%;
+    display: block;
+
+    text-overflow: ellipsis;
+}
+
+.slideInfo {
+    width: 100%;
+
+    overflow: hidden;
+
+    flex-wrap: wrap;
+}

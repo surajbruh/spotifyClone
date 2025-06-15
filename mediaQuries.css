@@ -1,0 +1,271 @@
+@media (max-width:1700px) {
+    .navbar {
+        justify-content: flex-start;
+    }
+
+    .nav-profile {
+        display: none;
+    }
+
+    #home {
+        margin: 0;
+    }
+
+    .nav-searchbar {
+        margin: 0;
+    }
+
+    #menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .playBarExtra {
+        min-width: max-content;
+    }
+
+    #pip,
+    #fullscreen,
+    #queue_music {
+        display: none;
+    }
+
+}
+
+@media (max-width:1200px) {
+    .main-right {
+        width: calc(100% - 10%);
+    }
+
+    .main-left {
+        width: 10%;
+    }
+
+    .track {
+        width: 80%;
+        /* height: 8vmax; */
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .trackInfo {
+        display: none;
+    }
+
+    .trackInfo>h3 {
+        color: white;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .trackInfo>h3:nth-child(2) {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .left-topbar-category {
+        display: none;
+    }
+
+    .topbar-library {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .topbar-library>h3,
+    .topbar-library h3,
+    #expand {
+        display: none;
+    }
+
+    #create.div {
+        padding: var(--maxPadding);
+        border-radius: 50%;
+
+        margin: 0;
+    }
+
+    .recently-played {
+        margin-top: 4rem;
+
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: repeat(2, minmax(25px, 45%));
+
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    #devices {
+        display: none;
+    }
+
+    .topbar-library>span {
+        display: block;
+    }
+
+    .create-div,
+    #expand {
+        display: none;
+    }
+
+    .library-container {
+        overflow-x: none;
+        z-index: 100;
+    }
+
+    .library {
+        background-color: #121212;
+        align-items: flex-start;
+        position: absolute;
+        width: 300px;
+    }
+
+    .track {
+        width: 100%;
+        /* padding: 1rem; */
+        gap: 1rem;
+    }
+
+    .trackInfo {
+        display: block;
+    }
+}
+
+@media (max-width:1024px) {
+    .box>h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:900px) {
+
+    #notes,
+    .addToPlaylist {
+        display: none;
+    }
+
+    .playBar span {
+        font-size: 2.1rem;
+    }
+
+    .trackCover {
+        border: 1px solid #dadada;
+        min-width: 45px;
+        min-height: 45px;
+    }
+
+    #trackArtist {
+        width: 70%;
+    }
+
+    .currentTrack {
+        padding: 0.5rem 0;
+    }
+
+    #trackName {
+        width: 60%;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+}
+
+@media (max-width:600px) {
+    .main-left {
+        position: absolute;
+        z-index: 100;
+        transform: translatex(-120%);
+    }
+
+    .library-container {
+        left: 120%;
+    }
+
+    .library {
+        bottom: 8%;
+        left: -500px;
+    }
+
+    .main-right {
+        width: 100%;
+    }
+
+    .category {
+        display: none;
+    }
+
+    .recently-played {
+        margin-top: 4rem;
+
+        grid-template-columns: repeat(4, 50%);
+        grid-template-rows: repeat(2, minmax(25px, 45%));
+
+        justify-content: center;
+
+        overflow: hidden;
+
+        gap: 1rem 2rem;
+    }
+
+
+    .playBarExtra,
+    #skipPreviousButton,
+    #skipNextButton,
+    #shuffleButton,
+    #repeatButton,
+    .durationContainer {
+        display: none;
+    }
+
+    .playBar {
+        justify-content: flex-start;
+    }
+
+    .playBarButtons {
+        position: relative;
+        height: 100%;
+        width: max-content;
+        top: 0;
+
+        margin-left: auto;
+    }
+
+
+    #devices {
+        display: block;
+    }
+
+    .playBarButton-container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .playBar {
+        bottom: 15%;
+        box-shadow: 0px 5px 29px -5px rgba(255, 255, 255, 0.3);
+        -webkit-box-shadow: 0px 5px 29px -5px rgba(255, 255, 255, 0.3);
+        -moz-box-shadow: 0px 5px 29px -5px rgba(255, 255, 255, 0.3);
+    }
+
+}
+
+
+@media (max-width: 425px) {
+
+    .cover {
+        width: 30%;
+        height: 100%;
+
+    }
+
+    .box>h3 {
+        font-size: 1.2rem;
+    }
+
+    .cover>img {
+        height: 100%;
+        object-fit: cover;
+
+    }
+}
